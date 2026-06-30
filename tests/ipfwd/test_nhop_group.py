@@ -340,7 +340,7 @@ def validate_asic_route(duthost, route, exist=True):
 def is_high_scale_platform(duthost) -> bool:
     interfaces_status = duthost.sonichost.get_interfaces_status()
     number_of_interfaces = len(interfaces_status.keys())
-    return number_of_interfaces >= 128
+    return number_of_interfaces >= 100
 
 
 def test_nhop_group_member_count(duthost, tbinfo, loganalyzer):
